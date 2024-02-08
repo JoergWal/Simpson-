@@ -92,7 +92,7 @@ def get_bot_response(client, prompt):
 # Hier beginnt die Hauptfunktion
 def main():
     # Hier holen wir den API-Schlüssel
-    APIKEY = os.environ.get("OPENAI_API_KEY")
+    APIKEY = st.secrets["openai_api_key"]
     if APIKEY is None:
         raise ValueError("Die Umgebungsvariable OPENAI_API_KEY ist nicht gesetzt.")
         return
