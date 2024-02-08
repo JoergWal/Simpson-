@@ -83,7 +83,7 @@ def generate_messages(prompt):
 # Diese Funktion holt die Antwort des Bots
 def get_bot_response(client, prompt):
     response = client.chat.completions.create(
-        model="gpt-4",
+        model="gpt-3.5-turbo",
         messages=generate_messages(prompt)
     )
     return response.choices[0].message.content
